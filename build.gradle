@@ -1,0 +1,26 @@
+plugins {
+
+	id 'java'
+	id 'idea'
+}
+
+group = 'pl.javasurvival'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:2.0.0.M6'
+	implementation 'io.vavr:vavr:1.0.0-alpha-3'
+//	implementation 'io.vavr:vavr:0.10.2'
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.2'
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
+//	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.1.1'
+//	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.0.RELEASE'
+//	testCompile group: 'io.projectreactor', name: 'reactor-test', version: '3.1.6.RELEASE'
+}
